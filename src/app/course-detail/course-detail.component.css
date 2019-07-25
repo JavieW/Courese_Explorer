@@ -1,0 +1,11 @@
+h3 {
+    font-family: Lato;
+  }
+  
+  p {
+      display: block;
+      margin-block-start: 5px;
+      margin-block-end: 5px;
+      margin-inline-start: 50px;
+      margin-inline-end: 0px;
+  }
