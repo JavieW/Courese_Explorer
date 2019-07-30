@@ -1,11 +1,24 @@
 h3 {
     font-family: Lato;
-  }
+}
   
-  p {
-      display: block;
-      margin-block-start: 5px;
-      margin-block-end: 5px;
-      margin-inline-start: 50px;
-      margin-inline-end: 0px;
-  }
+p {
+    display: block;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+}
+  
+a {
+    padding: 3px 8px;
+    text-decoration: none;
+    display: inline-grid;
+    background-color: #eee;
+    border-radius: 4px;
+    color: #607D8B;
+}
+a:hover {
+    color: #039be5;
+    background-color: #CFD8DC;
+}
