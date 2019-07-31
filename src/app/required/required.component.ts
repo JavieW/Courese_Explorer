@@ -13,6 +13,6 @@ export class RequiredComponent implements OnInit {
   constructor(private cs: CourseService) { }
 
   ngOnInit() {
-    this.courses = this.cs.getRequiredCourse();
+    this.courses = this.cs.getCoursesByFlag('required');
   }
 }

@@ -5,8 +5,10 @@ import { FinishedComponent } from './finished/finished.component';
 import { InterestedComponent } from './interested/interested.component';
 import { RequiredComponent } from './required/required.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { AllCoursesComponent } from './all-courses/all-courses.component';
 
 const routes: Routes = [
+  { path: 'all', component: AllCoursesComponent},
   { path: 'finished', component: FinishedComponent},
   { path: 'interested', component: InterestedComponent},
   { path: 'required', component: RequiredComponent},

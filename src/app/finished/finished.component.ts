@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../course.service';
+import { Course } from '../course';
 
 @Component({
   selector: 'app-finished',
@@ -8,11 +9,11 @@ import { CourseService } from '../course.service';
 })
 export class FinishedComponent implements OnInit {
 
-  courses;
+  courses: Course[];
 
   constructor(private cs: CourseService ) { }
 
   ngOnInit() {
-    this.courses = this.cs.getFinishedCourse();
+    this.courses = this.cs.getCoursesByFlag('finished');
   }
 }
