@@ -13,7 +13,12 @@ export class InterestedComponent implements OnInit {
   constructor(private cs: CourseService) { }
 
   ngOnInit() {
-    this.courses = this.cs.getCoursesByFlag('interested');
+    this.getCourses()
+  }
+
+  getCourses(): void {
+    this.cs.getCoursesByFlag('interested')
+    .subscribe(courses => this.courses = courses)
   }
 
 }

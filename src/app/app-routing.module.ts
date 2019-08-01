@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'finished', component: FinishedComponent},
   { path: 'interested', component: InterestedComponent},
   { path: 'required', component: RequiredComponent},
-  { path: 'detail/:code', component: CourseDetailComponent}
+  { path: 'detail/:code', component: CourseDetailComponent},
+  { path: '',   redirectTo: '/all', pathMatch: 'full' }
 ];
 
 @NgModule({

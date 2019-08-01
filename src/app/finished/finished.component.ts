@@ -14,6 +14,11 @@ export class FinishedComponent implements OnInit {
   constructor(private cs: CourseService ) { }
 
   ngOnInit() {
-    this.courses = this.cs.getCoursesByFlag('finished');
+    this.getCourses()
+  }
+
+  getCourses(): void {
+    this.cs.getCoursesByFlag('finished')
+    .subscribe(courses => this.courses = courses)
   }
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Course } from './course';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,27 +10,21 @@ import { Observable, of } from 'rxjs';
 export class CourseService {
   
   selectedCourse : Course;
-  all: Course[];
 
-  constructor(
-    private http: HttpClient) { 
-      http.get('api/courses').subscribe(courses => this.all = courses as Course[]);
-    }
+  constructor(private http: HttpClient) {}
 
   updateSelectedCourse(course : Course){
     this.selectedCourse = course;
   }
 
   /** GET courses from the server */
-  getCourses (): Course[] {
-    return this.all;
+  getCourses (): Observable<Course[]> {
+    return this.http.get<Course[]>('api/courses');
   }
 
   /** GET courses by flag. Will [] if flag not found */
-  getCoursesByFlag(flag: String):Course[] {
-    return this.all.filter(function(course) {
-      return course.flag == flag;
-    });
+  getCoursesByFlag(flag: String):Observable<Course[]> {
+    return this.http.get<Course[]>(`api/courses?flag=${flag}`);
   }
 
   getSelectedCourse(){
