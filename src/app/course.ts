@@ -1,7 +1,7 @@
 export class Course {
     code: string;
-    flag: string;
-    pre_request: string[];
+    tag: string;
+    prerequisite: string[];
     avalible_terms: string[];
     discription: string;
   }

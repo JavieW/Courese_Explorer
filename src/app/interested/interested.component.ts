@@ -17,7 +17,7 @@ export class InterestedComponent implements OnInit {
   }
 
   getCourses(): void {
-    this.cs.getCoursesByFlag('interested')
+    this.cs.getCoursesByTag('interested')
     .subscribe(courses => this.courses = courses)
   }
 

@@ -22,9 +22,9 @@ export class CourseService {
     return this.http.get<Course[]>('api/courses');
   }
 
-  /** GET courses by flag. Will [] if flag not found */
-  getCoursesByFlag(flag: String):Observable<Course[]> {
-    return this.http.get<Course[]>(`api/courses?flag=${flag}`);
+  /** GET courses by tag. Will [] if tag not found */
+  getCoursesByTag(tag: String):Observable<Course[]> {
+    return this.http.get<Course[]>(`api/courses?tag=${tag}`);
   }
 
   getSelectedCourse(){

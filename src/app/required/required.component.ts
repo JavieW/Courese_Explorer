@@ -17,7 +17,7 @@ export class RequiredComponent implements OnInit {
   }
 
   getCourses(): void {
-    this.cs.getCoursesByFlag('required')
+    this.cs.getCoursesByTag('required')
     .subscribe(courses => this.courses = courses)
   }
 }

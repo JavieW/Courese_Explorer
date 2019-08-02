@@ -18,7 +18,7 @@ export class FinishedComponent implements OnInit {
   }
 
   getCourses(): void {
-    this.cs.getCoursesByFlag('finished')
+    this.cs.getCoursesByTag('finished')
     .subscribe(courses => this.courses = courses)
   }
 }

@@ -10,124 +10,124 @@ export class InMemoryDataService implements InMemoryDbService {
     const courses = [
       { 
         code: 'CSCA08', 
-        flag: 'finished',
-        pre_request: null, 
+        tag: 'finished',
+        prerequisite: null, 
         avalible_terms: ['F','W'], 
         discription: 'Programming in an object-oriented language such as Python.'
       },
       { 
         code: 'CSCA48', 
-        flag: 'finished',
-        pre_request: ['CSCA08'], 
+        tag: 'finished',
+        prerequisite: ['CSCA08'], 
         avalible_terms: ['S','W'], 
         discription: 'Abstract data types and data structures for implementing them. '
       },
       { 
         code: 'CSCA67', 
-        flag: 'finished',
-        pre_request: null, 
+        tag: 'finished',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { code: 'MATA31', 
-        flag: 'finished',
-        pre_request: null, 
+        tag: 'finished',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { code: 'MATA37', 
-        flag: 'finished',
-        pre_request: null, 
+        tag: 'finished',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCB07', 
-        flag: 'finished',
-        pre_request: null, 
+        tag: 'finished',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { code: 'CSCB09', 
-        flag: 'finished',
-        pre_request: null, 
+        tag: 'finished',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC24', 
-        flag: 'interested',
-        pre_request: null, 
+        tag: 'interested',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null,
       },
       { 
         code: 'CSCC09', 
-        flag: 'interested',
-        pre_request: null, 
+        tag: 'interested',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCD84', 
-        flag: 'interested',
-        pre_request: null, 
+        tag: 'interested',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC11', 
-        flag: 'interested',
-        pre_request: null, 
+        tag: 'interested',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'MATB41', 
-        flag: 'interested',
-        pre_request: null, 
+        tag: 'interested',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC43', 
-        flag: 'required',
-        pre_request: null, 
+        tag: 'required',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC01', 
-        flag: 'required',
-        pre_request: null, 
+        tag: 'required',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC69', 
-        flag: 'required',
-        pre_request: null, 
+        tag: 'required',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC73', 
-        flag: 'required',
-        pre_request: null, 
+        tag: 'required',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC37', 
-        flag: 'required',
-        pre_request: null, 
+        tag: 'required',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       },
       { 
         code: 'CSCC63', 
-        flag: 'required',
-        pre_request: null, 
+        tag: 'required',
+        prerequisite: null, 
         avalible_terms: null, 
         discription: null
       }
