@@ -1,4 +1,5 @@
 export class Course {
+    id: number;
     code: string;
     tag: string;
     prerequisite: string[];

@@ -10,6 +10,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class CourseService {
   
   selectedCourse : Course;
+  coursesUrl = "api/courses";
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   constructor(private http: HttpClient) {}
 
@@ -17,17 +21,22 @@ export class CourseService {
     this.selectedCourse = course;
   }
 
+  getSelectedCourse(){
+    return this.selectedCourse;
+  }
+
   /** GET courses from the server */
   getCourses (): Observable<Course[]> {
-    return this.http.get<Course[]>('api/courses');
+    return this.http.get<Course[]>(this.coursesUrl);
   }
 
   /** GET courses by tag. Will [] if tag not found */
   getCoursesByTag(tag: String):Observable<Course[]> {
-    return this.http.get<Course[]>(`api/courses?tag=${tag}`);
+    return this.http.get<Course[]>(`${this.coursesUrl}?tag=${tag}`);
   }
 
-  getSelectedCourse(){
-    return this.selectedCourse;
+  /** PUT: update the hero on the server */
+  updateCourse(course: Course): Observable<any> {
+    return this.http.put(this.coursesUrl, course, this.httpOptions)
   }
 }

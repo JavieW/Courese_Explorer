@@ -1,12 +1,37 @@
 <h3>{{course.code}} Detail:</h3>
 
 <body>
-  <div class="code">Course Code: {{course.code}}</div>
-  <div class="prerequisite">Prerequisite: {{course.prerequisite}}</div>
-  <div class="avalible_terms">Avalible Terms: {{course.avalible_terms}}</div>
-  <div class="discription">Discription: <p>{{course.discription}}</p></div>
+  <div>
+      <label>Course Code:
+        <p>
+          <input [(ngModel)]="course.code"/>
+        </p>
+      </label>
+    </div>
+  <div>
+    <label>Prerequisite:
+      <p>
+        <input [(ngModel)]="course.prerequisite"/>
+      </p>
+    </label>
+  </div>
+  <div>
+    <label>Avalible Terms:
+      <p>
+        <input [(ngModel)]="course.avalible_terms"/>
+      </p>
+    </label>
+  </div>
+  <div>
+    <label>Discription:
+      <p>
+        <textarea rows= "5" cols="50" [(ngModel)]="course.discription"></textarea>
+      </p>  
+    </label>
+  </div>
 </body>
 
 <div></div>
 
 <a (click)="goBack()">Back</a>
+<a (click)="save()">Save</a>
