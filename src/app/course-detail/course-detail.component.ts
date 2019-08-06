@@ -28,4 +28,9 @@ export class CourseDetailComponent implements OnInit {
     this.cs.updateCourse(this.course)
       .subscribe(() => this.goBack());
   }
+
+  delete(): void {
+    this.cs.deleteCourse(this.course)
+      .subscribe(() => this.goBack());
+  }
 }

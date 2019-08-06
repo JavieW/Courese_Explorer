@@ -21,4 +21,15 @@ export class AllCoursesComponent implements OnInit {
     this.cs.getCourses()
     .subscribe(courses => this.courses = courses)
   }
+
+  add(): void {
+    var code =  prompt("Please enter a course code");
+    if (code != null && code != '') {
+      this.cs.addCourse({ code } as Course)
+      .subscribe(course => {
+        this.courses.push(course);
+      });
+      console.log(this.courses)
+    }
+  }
 }

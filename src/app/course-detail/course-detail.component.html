@@ -2,9 +2,16 @@
 
 <body>
   <div>
-      <label>Course Code:
+    <label>Course Code:
+      <p>
+        <input [(ngModel)]="course.code"/>
+      </p>
+    </label>
+  </div>
+  <div>
+      <label>Tag:
         <p>
-          <input [(ngModel)]="course.code"/>
+          <input [(ngModel)]="course.tag"/>
         </p>
       </label>
     </div>
@@ -35,3 +42,4 @@
 
 <a (click)="goBack()">Back</a>
 <a (click)="save()">Save</a>
+<a (click)="delete()">Delete</a>

@@ -37,6 +37,14 @@ export class CourseService {
 
   /** PUT: update the hero on the server */
   updateCourse(course: Course): Observable<any> {
-    return this.http.put(this.coursesUrl, course, this.httpOptions)
+    return this.http.put(this.coursesUrl, course, this.httpOptions);
+  }
+
+  addCourse(course: Course): Observable<Course> {
+    return this.http.post<Course>(this.coursesUrl, course, this.httpOptions);
+  }
+
+  deleteCourse(course: Course): Observable<Course> {
+    return this.http.delete<Course>(`${this.coursesUrl}/${course.id}`, this.httpOptions);
   }
 }

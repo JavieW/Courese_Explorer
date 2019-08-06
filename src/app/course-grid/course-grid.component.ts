@@ -16,7 +16,7 @@ export class CourseGridComponent implements OnInit {
   ngOnInit() {
   }
 
-  update(course : Course) {
+  updateSelectedCourse(course : Course) {
     this.cs.updateSelectedCourse(course);
   }
 }

@@ -1,6 +1,6 @@
 <div>
   <span *ngFor="let course of courses">
-    <a  routerLink="/detail/{{course.code}}" (click)="update(course)">
+    <a routerLink="/detail/{{course.code}}" (click)="updateSelectedCourse(course)">
       {{course.code}}
     </a>
   </span>
